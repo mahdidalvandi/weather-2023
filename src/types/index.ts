@@ -4,7 +4,9 @@ export type inputTypes = {
   lon: number;
 };
 export type historyObjTypes = {
-  Hcity: [name: string];
+  Hcity: {
+    map: Function;
+  };
 };
 export type weatherTypes = {
   name: string;

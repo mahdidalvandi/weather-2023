@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 type Props = {
   term: string;
-  historyObj: historyObjTypes;
+  historyobj: historyObjTypes;
   options: [];
   onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onOptionSelect: (input: inputTypes) => void;
@@ -14,7 +14,7 @@ type Props = {
 };
 const Search = ({
   term,
-  historyObj,
+  historyobj,
   checkedInput,
   options,
   onInputChange,
@@ -55,7 +55,7 @@ const Search = ({
             <p className="text-2xl font-semibold text-gray-900 dark:text-white">
               Recent:
             </p>
-            {historyObj.Hcity.map((item) => {
+            {historyobj.Hcity.map((item: string) => {
               return (
                 <section className="flex">
                   <ul className=" list-disc list-inside">

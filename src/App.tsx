@@ -43,12 +43,12 @@ function App() {
     getInfo(city);
   };
 
-  var historyObj = { Hcity: [] };
+  var historyobj = { Hcity: [] };
 
   function onLoad() {
     if (localStorage.getItem("history") || "") {
-      if (historyObj !== null)
-        historyObj = JSON.parse(localStorage.getItem("history") || "");
+      if (historyobj !== null)
+        historyobj = JSON.parse(localStorage.getItem("history") || "");
     }
   }
   onLoad();
@@ -59,8 +59,8 @@ function App() {
         setTerm(city.name);
         setOptions([]);
         //@ts-ignore
-        historyObj.Hcity.push(city?.name);
-        localStorage.setItem("history", JSON.stringify(historyObj));
+        historyobj.Hcity.push(city?.name);
+        localStorage.setItem("history", JSON.stringify(historyobj));
       }
     }
     addHistory();
@@ -78,7 +78,7 @@ function App() {
           onSubmit={onSubmit}
           onInputChange={onInputChange}
           checkedInput={checkedInput}
-          historyObj={historyObj}
+          historyobj={historyobj}
         />
       )}
     </main>
