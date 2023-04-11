@@ -13,9 +13,11 @@ export type weatherTypes = {
   country: string;
   sunrise: number;
   sunset: number;
-  list: [
-    {
-      dt: number;
+  list: listObjects[];
+};
+
+export type listObjects = {
+  dt: number;
       dt_txt: string;
       main: {
         feels_like: number;
@@ -41,6 +43,4 @@ export type weatherTypes = {
       };
       pop: number;
       visibility: number;
-    }
-  ];
-};
+}

@@ -12,8 +12,11 @@ const Degree = ({ temp }: { temp: number }): JSX.Element => (
 
 const Result = ({ info }: Props) => {
   const today = info.list[0];
-  const tomorrow: any = info.list[8];
+  console.log(today);
+  const tomorrow = info.list[8];
+  console.log(tomorrow);
   const third: any = info.list[16];
+  console.log(third);
   const K_TO_F = (): number => {
     const F = ((Math.round(today.main.temp) - 273.15) * 9) / 5 + 32;
     return F;
