@@ -69,7 +69,7 @@ const Search = ({
             {options.map((input: inputTypes, index: number) => (
               <li key={index}>
                 <button
-                  className="text-left  text-sm w-full hover:bg-gray-600 px-2 py-1 cursor-pointer"
+                  className="text-left text-sm w-full hover:bg-gray-600 px-2 py-1 cursor-pointer"
                   onClick={() => onOptionSelect(input)}
                 >
                   {input.name}

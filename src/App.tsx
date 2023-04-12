@@ -12,7 +12,7 @@ function App() {
   const [checkedInput, setCheckedInput] = useState<boolean>(false);
   const getSearchOptions = (value: string) => {
     fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${value.trim()}&limit=10&appid=${key}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${value.trim()}&limit=10&appid=${key}`
     )
       .then((res) => res.json())
       .then((data) => setOptions(data));
@@ -27,7 +27,7 @@ function App() {
   const onOptionSelect = (input: inputTypes) => {
     setcity(input);
   };
-  const getInfo = (city: inputTypes) => {
+  function getInfo(city: inputTypes) {
     fetch(
       `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&appid=${key}`
     )
@@ -37,7 +37,7 @@ function App() {
         setInfo(dataInfo);
       });
     setTerm("");
-  };
+  }
   const onSubmit = () => {
     if (!city) return setCheckedInput(true);
     getInfo(city);
